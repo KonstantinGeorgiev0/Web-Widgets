@@ -14,4 +14,4 @@ and autoreloads any changes you make in the code.
 To simply build the code once you can run `yarn build`. This will create a bundle in the `/dist` folder.
 
 You can select what widget is shown by editing the first line of the file `src/js/index.js` and changing the name
-in the `requrie("...");` line.
+in the `require("...");` line.
