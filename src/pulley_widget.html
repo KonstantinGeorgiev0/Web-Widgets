@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<div class="container">
+  <div id="canvas-container">
+    <canvas id="myCanvas" resize></canvas>
+  </div>
+  <div class="side-panel">
+    <div class="slider-container">
+      <div class="range-slider">
+        <label id="forceSliderLabel" for="forceSlider">Force applied (F): </label>
+        <input type="range" id="forceSlider" min="1" max="100" value="50">
+      </div>
+
+      <div class="range-slider">
+        <label id="massSliderLabel" for="massSlider">Weight on pulley (M): </label>
+        <input type="range" class="range slider" id="massSlider" min="1" max="100" value="50">
+      </div>
+    </div>
+    <div class="buttons-container">
+      <button class="btn simulate" id="simulateButton">Simulate Physics</button>
+      <button class="btn reset" id="resetButton">Reset</button>
+    </div>
+    <div class="alert-text-container">
+      <h3 id="alertText">The Force is in balance and the pulley does not move.</h3>
+    </div>
+    <div class="alert-text-container">
+      <h3 id="alertText2">The forces are not in balance. For visualization purposes, we stopped the animation.</h3>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

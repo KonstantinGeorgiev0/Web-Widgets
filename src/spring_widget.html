@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="assets/css/style3.css">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <script type="text/html" src="spring_widget.html"></script>
+    <div class="container">
+        <div class="images-container">
+            <div id="myPlot" class="plot" style=""></div>
+            <div id="myPlot2" class="plot" style=""></div>
+            <div id="myPlot3" class="plot" style=""></div>
+        </div>
+        <canvas id="myCanvas" width=400 height=200 resize></canvas>
+        <div class="slider-container">
+
+            <div class="range-slider">
+                <label for="k_slider">Stiffness <b>k</b> (<span id="k_slider_label">50</span> N / m)</label>
+                <input id="k_slider" type="range" min=1 max=100 value=50>
+            </div>
+
+            <div class="range-slider">
+                <label for="b_slider">Damping <b>d</b> (<span id="b_slider_label">5</span> Ns / m)</label>
+                <input id="b_slider" type="range" min=0 max=10 value=5 step=1>
+            </div>
+
+            <div class="range-slider">
+                <label for="m_slider">Mass <b>m</b> (<span id="m_slider_label">6</span>) kg</label>
+                <input id="m_slider" type="range" min=1 max=11 value=6 step=1>
+            </div>
+
+            <div class="range-slider">
+                <label for="blockSlider">Block Position <b>x<sub>0</sub></b> (<span id="blockSliderLabel">0</span>) m</label>
+                <input id="blockSlider" type="range" min=-1 max=1 value=0 step=0.001>
+            </div>
+
+            <div class="range-slider">
+                <button class="btn simulate" id="simulatePhysics" >Simulate Physics</button>
+                <button class="btn reset" id="resetButton">Reset</button>
+            </div>
+
+            <div class="forces2">$\ddot{x}+2\omega_n \zeta \dot{x}+\omega_n^2 x =0$</div>
+            <div class="forces1">$\omega_n=\sqrt{\frac{d}{m}}, \zeta = \frac{d}{2\sqrt{km}}$</div>
+            <div class="forces1_values">$\omega_n=$ <span id="omega"></span>, $\zeta=$ <span id="zeta"></span></div>
+
+            <div class="message" id="message"></div>
+
+        </div>
+    </div>
+</body>
+</html>

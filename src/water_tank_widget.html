@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="canvas-container">
+        <canvas id="myCanvas" resize></canvas>
+    </div>
+    <div class="side-panel">
+        <div class="slider-container">
+            <div class="range-slider">
+                <label id="forceSliderLabel" for="forceSlider">Force applied (F): </label>
+                <input type="range" id="forceSlider" min="1" max="500" value="250">
+            </div>
+
+            <div class="range-slider">
+                <label id="tankWidthSliderLabel" for="tankWidthSlider">Tank width (d1): </label>
+                <input type="range" id="tankWidthSlider" min="0.5" max="1.5" value="1.00" step="0.01">
+            </div>
+
+            <div class="range-slider">
+                <label id="pipeHeightSliderLabel" for="pipeHeightSlider">Pipe height (h2): </label>
+                <input type="range" id="pipeHeightSlider" min="0.1" max="2" value="0.5" step="0.001">
+            </div>
+
+            <div class="range-slider">
+                <label id="pipeEntryHeightSliderLabel" for="pipeEntryHeightSlider">Pipe entry height (h3): </label>
+                <input type="range" id="pipeEntryHeightSlider" min="0" max="0.3" value="0" step="0.01">
+            </div>
+
+            <div class="range-slider">
+                <label id="pipeWidthSliderLabel" for="pipeWidthSlider">Pipe width (d2): </label>
+                <input type="range" id="pipeWidthSlider" min="0.05" max="0.1" value="0.075" step="0.001">
+            </div>
+
+            <div class="checkbox-div">
+                <label id="staticCheckboxLabel" for="staticCheckbox">Static:</label>
+                <input type="checkbox" id="staticCheckbox" />
+
+                <label id="v0label">v<sub>0</sub> : </label>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button class="btn simulate" id="simulateButton">Simulate Physics</button>
+            <button class="btn reset" id="resetButton">Reset</button>
+        </div>
+        <div class="alert-text-container">
+            <h3 id="alertText">The Force applied is not enough to move the water!</h3>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

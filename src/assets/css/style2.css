@@ -1,0 +1,141 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /*font-family:Helvetica, Arial, sans-serif;*/
+  /*font-size:20px;*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+canvas[resize] {
+  display: flex;
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border: 2px solid black;
+  padding: 1vh;
+  font-size: 1.25vw;
+  zoom: 1;
+  /*width: 100% !important;*/
+  /*height: 100vh !important;*/
+  width: calc(50vw - 2vw); /* Set a fixed width for the slider container */
+  /*width: 40vw;*/
+  height: calc(102vh - 2vh); /* Calculate height based on viewport height */
+  /*height: 100vh;*/
+  resize: none;
+  /*overflow-y: auto; !* Add vertical scrollbar if content exceeds height *!*/
+  /*overflow-x: auto;*/
+}
+
+.slider-container > div {
+  border-bottom: 2px solid #EEE;
+  padding: 5px 0;
+}
+
+.range-slider {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 1vw;
+  resize: none;
+}
+
+.range-slider label {
+  margin-right: 0.5vh;
+  width: 100%;
+}
+
+.range-slider input {
+  flex: 1;
+  /*width: 17vw;*/
+}
+
+.message-wall {
+  position: relative;
+  text-align: center;
+  resize: none;
+  /*margin-top: 5%;*/
+  white-space: pre-line;
+  /*font-size: 20px;*/
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  resize: none;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  margin-top: 0.5vh;
+  padding: 1vw 2vw;
+  font-size: 1.4vw;
+  cursor: pointer;
+  transition: border-radius 0.3s;
+}
+
+.btn:hover {
+  border-radius: 1vw;
+}
+
+.reset {
+  margin-top: 1vh;
+  color: rgba(255, 0, 0, 0.885);
+  float: right;
+}
+.reset:hover {
+  background-color: rgba(255, 0, 0, 0.885);
+  color: white;
+}
+
+.simulate {
+  color: rgb(76, 165, 255);
+  float: left;
+  margin-right: 0.2vw;
+}
+
+.simulate:hover {
+  background-color: rgb(76, 165, 255);
+  color: white;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  resize: none;
+  /*position: relative;*/
+  text-align: center;
+  margin-bottom: 5%;
+  white-space: pre-line;
+}
+
+.forces_text textarea {
+  position: relative;
+  text-align: center;
+  resize: none;
+  flex: auto;
+  margin-bottom: 5%;
+  font-size: 10px;
+  width: 15vw;
+  height: 7.5vh;
+}

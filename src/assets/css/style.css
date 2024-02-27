@@ -1,0 +1,127 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.canvas-container {
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+  display: flex;
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  border: 2px solid black;
+}
+
+/* Position the slider bar */
+.side-panel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border: 2px solid black;
+  padding: 1vh;
+  font-size: 1.25vw;
+}
+
+.slider-container {
+  /*width: fit-content;*/
+}
+
+.range-slider {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 1vw;
+}
+
+.range-slider label {
+  margin-right: 0.5vh;
+  width: 100%;
+}
+
+.range-slider input {
+  flex: 1;
+  width: 15vw;
+}
+
+.checkbox-div {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-bottom: 1vw;
+}
+
+#staticCheckboxLabel {
+  width: 20%;
+}
+
+#staticCheckbox {
+  width: 20%;
+}
+
+#v0label {
+  visibility: hidden;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  margin-top: 0.5vh;
+  padding: 1vw 2vw;
+  font-size: 1.4vw;
+  cursor: pointer;
+  transition: border-radius 0.3s;
+  /*width: 50%;*/
+}
+
+.btn:hover {
+  border-radius: 1vw;
+}
+
+.reset {
+  margin-top: 1vh;
+  color: rgba(255, 0, 0, 0.885);
+  float: right;
+}
+.reset:hover {
+  background-color: rgba(255, 0, 0, 0.885);
+  color: white;
+}
+
+.simulate {
+  color: rgb(76, 165, 255);
+  float: left;
+  margin-right: 0.2vw;
+}
+
+.simulate:hover {
+  background-color: rgb(76, 165, 255);
+  color: white;
+}
+
+.alert-text-container {
+  margin: 5px;
+  text-align: center;
+  color: red;
+  visibility: hidden;
+}

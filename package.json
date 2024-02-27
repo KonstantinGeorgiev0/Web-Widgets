@@ -1,0 +1,32 @@
+{
+  "name": "widgets_tue",
+  "version": "1.0.0",
+  "dependencies": {
+    "paper": "^0.12.17",
+    "path-browserify": "^1.0.1",
+    "url": "^0.11.3"
+  },
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=development",
+    "serve": "webpack serve --mode=development",
+    "predeploy": "npm run build",
+    "lint": "eslint './src/**/*.js' --fix"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "repository": {
+    "url": "git@gitlab.tue.nl:ME_Widgets/2023-2024.git"
+  }
+}
